@@ -29,5 +29,24 @@ public class Pilha {
 
 
 
+    @Override
+    public String toString(){
+        String  stringReturn = "------- \n";
+        stringReturn += " Pilha \n";
+        stringReturn +=  "------- \n";
+
+
+        No noAuxiliar = refNoEntradaP;
+
+        while(true){
+            if (noAuxiliar != null){
+                stringReturn +=" No{dado =" + noAuxiliar.getDado() +"}";
+                noAuxiliar = noAuxiliar.getRefNo();
+            }else{
+                break;
+            }
+        }
+        return stringReturn;
+    }
 
 }
